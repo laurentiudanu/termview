@@ -57,45 +57,55 @@ fieldset {border: 1px solid #c0c0c0; padding: 16px;}
   font-style: italic;
 }
 body {
-  font: 12px/1.5em "Hack", monospace;
-  background-color: #101010;
-  color: #e4e4e4;
+  font: 16px/1.5em "Courier New",Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;;
+  background-color: #05030a;
+  color: #ccc2a4;
   overflow-x: hidden;
 }
 .hidden {display: none; opacity: 0; pointer-events: none;}
-.container {max-width: 98%; margin-left: auto; margin-right: auto;}
+.container {max-width: 92%; padding: 4vw 0 0 0; margin-left: auto; margin-right: auto;}
 
 
-p:not(:last-of-type) {margin: 0 0 16px 0;}
-.notice {
-  padding: 4px 8px;
-  background-color: #303030;
-  color: #ffc005;
-}
-  .notice:hover {background-color: #262222;}
-  .notice p {margin: 0;}
-strong {color: #ffc005; font-weight: 700;}
-a {
-  /* color: #004f9e; */
-  color: #fff;
-  display: inline-block;
-  vertical-align: top;
-  padding: 4px 8px;
-  background-color: #ec0048;
-  font-weight: 700;
-}
+p {margin: 0 0 16px 0;}
+
+strong {color: #ffc005; font-weight: 400;}
+
 
 h1 {
   font-weight: 700;
   font-size: 16px;
-  padding: 16px 0 0 0;
-  color: #2aa7e7;
+  color: #efe5be;
+  margin: 0 0 24px 0;
+  padding: 0 0 0 40px;
+  position: relative;
 }
-h2 {
-  font-weight: 700;
-  font-size: 14px;
-  padding: 16px 0 0 0;
-  color: #6ab017;
-}
-ul {padding: 40px 0;}
-li {float: left; margin: 0 8px;}
+  h1:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #efe5be;
+    position: absolute;
+    left: 0;
+    top: 12px;
+  }
+  h1 span {
+    display: inline-block;
+    padding: 0 8px;
+    vertical-align: top;
+    background-color: #05030a;
+    position: relative;
+    z-index: 10;
+  }
+
+table {table-layout: fixed; width: 100%;}
+  table td {
+    vertical-align: middle;
+    padding: 8px 16px;
+  }
+  table td.date {width: 104px;}
+  table tr:first-of-type {background-color: #262222; color: #ffc005;}
+    table tr:first-of-type:hover {background-color: #303030;}
+  table tr:nth-of-type(2) {color: #f30e54;}
+  table tr:nth-of-type(3) {background-color: #11222b; color: #fff;}
+  table p {margin: 0;}
